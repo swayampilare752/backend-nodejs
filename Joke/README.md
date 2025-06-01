@@ -23,8 +23,8 @@ npm (Node Package Manager)
 
 📦 Installation
 
-git clone https://github.com/your-username/random-jokes-api.git
-cd random-jokes-api
+git clone https://github.com/swayampilare752/backend-nodejs.git
+cd Joke
 npm install
 node index.js
 Server will run at: http://localhost:8080

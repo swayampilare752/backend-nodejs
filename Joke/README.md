@@ -22,16 +22,10 @@ Node.js (v14+)
 npm (Node Package Manager)
 
 📦 Installation
-bash
-Copy
-Edit
-git clone https://github.com/your-username/random-jokes-api.git
-cd random-jokes-api
+
+git clone https://github.com/swayampilare752/backend-nodejs.git
+cd Joke
 npm install
-▶️ Running the Server
-bash
-Copy
-Edit
 node index.js
 Server will run at: http://localhost:8080
 
@@ -41,17 +35,12 @@ GET	/	Welcome message
 GET	/api/jokes/random	Returns a random joke (external or local fallback)
 
 🧪 Testing the API
-Use Postman, Thunder Client, or curl:
+Use Postman, Thunder Client, or url:
 
-bash
-Copy
-Edit
-curl http://localhost:8080/api/jokes/random
+url :- http://localhost:8080/api/jokes/random
 Expected Output:
 
 json
-Copy
-Edit
 {
   "setup": "Why don't programmers prefer dark mode?",
   "punchline": "Because the light attracts bugs."
@@ -59,9 +48,7 @@ Edit
 If external API is working, it will return a different joke from Official Joke API.
 
 📁 Project Structure
-bash
-Copy
-Edit
+
 random-jokes-api/
 │
 ├── index.js            # Main Express server
@@ -104,4 +91,4 @@ Testing APIs using tools like Postman.
 ✅ GitHub repo with proper structure and README ✅
 
 🔗 Submission
-Please clone or view the repository here:
+[GitHub Repository](https://github.com/swayampilare752/backend-nodejs/tree/main/Joke)

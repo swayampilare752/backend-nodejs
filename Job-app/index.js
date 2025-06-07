@@ -1,36 +1,25 @@
 const express = require("express");
 
+// connection of mongoDB  Using Mongoose
+
+const mongoose = require("mongoose");
+
 const app = express();
 
-const JobRoutes = require("./route/job.routes")
+app.use(express.json());
+
+mongoose
+.connect("mongodb://127.0.0.1:27017/jobapp")
+.then(() => console.log(`DB Connected successfully`))
+.catch(err => console.log(`Error connecting database`, err)); 
+
+const JobRoutes = require("./route/job.routes");   // connection to  routes folder   
+
 const Portno = 8080;
 
-app.get("api/v1/job/create", (req, res) => {
-res.json({
-success: true,
-message: "Create job api"
-})
-});
+app.use ("/api/v1/job", JobRoutes);
 
-app.get("api/v1/job/list", (req, res) => {
-res.json({
-success: true,
-message: "List job api"
-});
-});
 
-app.post("api/v1/job/edit", (req, res) => {
-res.json({
-success: true,
-message: "Edit job api"
-});
-});
 
-app.post("api/v1/job/delete", (req, res) => {
-res.json({
-success: true,
-message: "Delete job api"
-});
-});
 
 app.listen(Portno, () => console.log(`Server Running at ${Portno}`));

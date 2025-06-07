@@ -2,33 +2,15 @@ const express = require("express");
 
 const router = express.Router();
 
+const jobController = require("../controller/job.controller");
 
-router.get("api/v1/job/create", (req, res) => {
-res.json({
-success: true,
-message: "Create job api"
-})
-});
 
-router.get("api/v1/job/list", (req, res) => {
-res.json({
-success: true,
-message: "List job api"
-});
-});
+router.post("/create", jobController.createJob);
 
-router.post("api/v1/job/edit", (req, res) => {
-res.json({
-success: true,
-message: "Edit job api"
-});
-});
+router.get("/list", jobController.listJob);
 
-router.post("api/v1/job/delete", (req, res) => {
-res.json({
-success: true,
-message: "Delete job api"
-});
-});
+router.patch("/edit", jobController.editJob);
+
+router.delete("/delete", jobController.deleteJob);
 
 module.exports = router;

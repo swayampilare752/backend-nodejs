@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 mongoose
-.connect("mongodb://127.0.0.1:27017/jobapp")
+.connect("mongodb+srv://swayampilare07:6GtmZXEdiGQAwrt8@cluster0.5usvwso.mongodb.net/")
 .then(() => console.log(`DB Connected successfully`))
 .catch(err => console.log(`Error connecting database`, err)); 
 

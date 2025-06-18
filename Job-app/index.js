@@ -1,15 +1,17 @@
 const express = require("express");
-
+const dotenv = require("dotenv");
 // connection of mongoDB  Using Mongoose
 
 const mongoose = require("mongoose");
 
 const app = express();
 
+dotenv.config();
+
 app.use(express.json());
 
 mongoose
-.connect("mongodb+srv://swayampilare07:6GtmZXEdiGQAwrt8@cluster0.5usvwso.mongodb.net/")
+.connect(process.env.DB_URL)
 .then(() => console.log(`DB Connected successfully`))
 .catch(err => console.log(`Error connecting database`, err)); 
 

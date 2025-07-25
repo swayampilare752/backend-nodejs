@@ -1,16 +1,22 @@
 {
   "name": "webscrapper",
   "version": "1.0.0",
-  "description": "",
+  "description": "IPL Statistics Dashboard with web scraping and Chart.js visualizations",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js",
+    "scrape": "node scrape.js",
     "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Swayam",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
     "puppeteer": "^24.9.0",
     "xlsx": "^0.18.5"
   }
